@@ -25,8 +25,8 @@ To use Watson Machine Learning, from the Bluemix catalog, you must create the [s
 
 ## Steps
 
-1. [Create and store](pm_custom_models.html) a model.
-2. [Deploy](pm_service_api_spark_online.html)  model.
+1. [Create and store a model](pm_custom_models.html).
+2. [Deploy a  model](pm_service_api_spark_online.html).
 3. Use the deployed model ```scoring endpoint``` in your application to [get predictions.](pm_service_api_spark_building.html)
 
 ## About

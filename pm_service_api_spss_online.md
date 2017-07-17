@@ -306,10 +306,9 @@ deployed model.
    < X-Powered-By: Servlet/3.0
    
    < X-Global-Transaction-ID: 3291552207
-   
-    
-   
+      
    [{"header":["customerID","Churn","Predicted Churn","Probability of Churn"],"data":[["9237-HQITU","Yes","Yes",0.8829830706957551]]}] 
    ```
    {: codeblock}
-   
+
+ 

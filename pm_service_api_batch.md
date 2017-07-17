@@ -623,8 +623,7 @@ All settings required to run this job.
 
 Database connectivity definitions
 
-Database type: DB2, DashDB, Informix, Oracle, Sybase, SQLServer,
-MySQL.
+Database type: ApacheHive, DashDB, DB2, Greenplum, Impala, Informix, MySQL, Oracle, PostgreSQL, ProgressOpenEdge, Salesforce,  SQLServer, Sybase, SybaseIQ, Teradata.
 
 Connectivity as specified in DB service instance, many DB types
 require specific settings to be passed in ‘Options’

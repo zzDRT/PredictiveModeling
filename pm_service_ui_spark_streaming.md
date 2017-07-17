@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-06-23"
+lastupdated: "2017-07-14"
 
 ---
 
@@ -33,7 +33,6 @@ See this [document](https://github.com/pmservice/tweet-sentiment-prediction) for
 
 1. Go to the Samples tab of the IBM® Watson™ Machine Learning
    Dashboard.
-
 2. In the Sample Models section, find the Sentiment Prediction
    tile and click the Add model button (+).
 
@@ -43,16 +42,14 @@ of available models on the Models tab.
 
 ## Creating a streaming deployment with IBM Message Hub
 
-1. Go to the Models tab of the IBM® Watson™ Machine Learning
-   Dashboard.
+1.  Go to the Models tab of the IBM® Watson™ Machine Learning Dashboard.
+2.  From ACTIONS menu select Create Deployment.
+3.  In Create Deployment form provide Name, Description and Batch Type.
+4.  You must provide the following inputs:
 
-2. From ACTIONS menu select Create Deployment.
+    **Input Connection**: IBM Message Hub topics details which are used as input (tweets) for the model and storage for the model output  (prediction results).
 
-3. In Create Deployment form provide Name, Description and Batch Type.
-
-4. You must provide the following inputs:
-  * **Input Connection**: IBM Message Hub topics details which are used as input (tweets) for the model and storage for the model output  (prediction results).
-  ```
+    ```
   {
      "connection":{
         "kafka_brokers_sasl":[
@@ -74,11 +71,12 @@ of available models on the Models tab.
         "type":"kafka"
      }
   }
-  ```
-{: codeblock}
+    ```
+    {: codeblock}
 
- * **Output Connection**
- ```
+    **Output Connection**
+
+    ```
  {
     "connection":{
        "kafka_brokers_sasl":[
@@ -100,11 +98,12 @@ of available models on the Models tab.
        "type":"kafka"
     }
  }
- ```
-{: codeblock}
+    ```
+    {: codeblock}
 
- * **Spark Connection**: Spark service Credentials can be found on the Service Credentials tab of the Bluemix Spark service dashboard.
-```
+    **Spark Connection**: Spark service Credentials can be found on the Service Credentials tab of the Bluemix Spark service dashboard.
+
+     ```
 {
       "tenant_id": "s745-299dcf850a6390-35c9a7ecf27a",  
       "tenant_id_full": "ba3dde5a-ee64-4057-9749-299dcf850a63_4c55eb1c-d6fe-4f0a-9390-35c9a7ecf27a",  
@@ -113,12 +112,12 @@ of available models on the Models tab.
       "tenant_secret": "c0cba7a4-7b19-46e6-9326-44c4f48aaf08",  
       "plan": "ibm.SparkService.PayGoPersonal"
 }
-```
-{: codeblock}
+     ```
+     {: codeblock}
 
-5. Press Save button.
+5. Click **Save**.
+
 The prediction result is sent to defined MessageHub topic (Output connection).
-
 
 ## Obtaining deployment details
 
@@ -126,9 +125,7 @@ You can check the status, and parameters related to the deployed model.
 
 1. Go to the Deployments tab of the IBM® Watson™ Machine Learning
    Dashboard.
-
-2. From ACTIONS menu select View Details.
-
+2. From **Actions** menu, click **View Details**.
 
 ## Deleting a streaming deployment
 
@@ -137,5 +134,4 @@ query such as the following sample.
 
 1. Go to the Deployments tab of the IBM® Watson™ Machine Learning
    Dashboard.
-
 2. From ACTIONS menu select Delete.
