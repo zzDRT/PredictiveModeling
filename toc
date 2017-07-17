@@ -1,0 +1,72 @@
+<!-- Markdown Navigation -->
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="PredictiveModeling" audience="service" href="/docs/services/PredictiveModeling/index.html"}
+Machine Learning
+
+    {: .navgroup id="learn"}
+    index.md
+
+    {: .topicgroup}
+    Spark and Python models
+        using_pm_service_dsx.md
+        pm_service_api_spark.md
+            pm_service_api_spark_swagger.md
+            pm_custom_models.md
+            pm_service_api_spark_online.md
+            pm_service_api_spark_batch.md
+            pm_service_api_spark_streaming.md
+            pm_service_api_spark_building.md
+        pm_service_ui_spark.md
+            pm_service_ui_spark_online.md
+            pm_service_ui_spark_batch.md
+            pm_service_ui_spark_streaming.md
+
+    {: .topicgroup}
+    SPSS Models
+        using_pm_service.md
+        pm_service_api_spss.md
+            pm_service_api_spss_online.md
+            pm_service_api_manage.md
+            pm_service_api_develop.md
+            pm_service_api_batch
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [IBM SPSS Modeler Knowledge Center](https://www.ibm.com/support/knowledgecenter/SS3RA7/)
+    [IBM Data Science Experience](https://datascience.ibm.com/)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Machine Learning REST API](http://watson-ml-api.mybluemix.net/)
+
+    {: .topicgroup}
+    Sample applications
+        [Customer interest in sport products prediction using Spark MLlib](https://github.com/pmservice/product-line-prediction)
+        [Financial performance prediction of a company using SPSS](https://github.com/pmservice/financial-performance-prediction)
+        [Best drug selection for a heart problem using SPSS](https://github.com/pmservice/drug-selection)
+        [Clothes sales profits prediction using SPSS](https://github.com/pmservice/profits-forecast)
+        [Customer churn prediction using SPSS](https://github.com/pmservice/customer-satisfaction-prediction)
+
+    {: .topicgroup}
+    Sample notebooks
+        [From Spark MLlib model to online scoring with Python](https://apsportal.ibm.com/analytics/notebooks/89492fd6-a641-4819-9176-3d9381561df9/view?access_token=d80bef1a172d1d83d3721b101886337158457281774186f181a2e6a5b57f5ec7)
+        [From Spark MLlib model to online scoring with Scala](https://apsportal.ibm.com/analytics/notebooks/c8652d2c-bfc9-4354-8168-f1c9f7f8dfc2/view?access_token=02a83fea8450a452c8de76af98dae078459d0f56810ddef4f4c62d5bc4fc72cf)
+        [From scikit-learn to online scoring with Python](https://apsportal.ibm.com/analytics/notebooks/5215a61a-16d7-4fa2-b060-e3e243ceebe3/view?access_token=70f48c95c5571a614ce97484d3f168b1d9b6aeebce015187d3d77ce6038f025e)
+        [From SPSS stream to batch scoring with Python](https://apsportal.ibm.com/analytics/notebooks/9d7ce38e-9417-4c76-a6b9-5bc8cf40938a/view?access_token=5ca87e3007804e5b2bbbce77c20e99ac3c164d66f2d28dfffb54aa365caaef37)
+    {: .navgroup-end}
+
+    {: .topicgroup}
+    Runtime environments
+        [SDK for Node.js](../../runtimes/nodejs/index.html)
+        [Liberty for Java](../../runtimes/liberty/index.html)
+        [Go](../../runtimes/go/index.html)
+        [PHP](../../runtimes/php/index.html)
+        [Python](../../runtimes/python/index.html)
+        [Ruby](../../runtimes/ruby/index.html)
+
+    {: .navgroup id="help"}
+    [Current support for IBM SPSS Modeler nodes](https://www.ibm.com/support/knowledgecenter/SSWLVY_3.0.1/analytic_server_user-guide_ddita/analytic_server/ae_modeler_integration_supported_nodes.html/)
+    [IBM Watson Machine Learning](https://datasciencex.typeform.com/to/h8gqld)
+    {: .navgroup-end}

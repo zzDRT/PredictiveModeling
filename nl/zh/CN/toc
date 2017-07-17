@@ -1,0 +1,66 @@
+<!-- Markdown Navigation -->
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="PredictiveModeling" audience="service" href="/docs/services/PredictiveModeling/index.html"}
+Machine Learning
+    {: .navgroup id="learn"}
+    index.md
+
+    {: .topicgroup}
+    Spark 和 Python 模型
+        using_pm_service_dsx.md
+        pm_service_api_spark.md
+            pm_service_api_spark_swagger.md
+            pm_custom_models.md
+            pm_service_api_spark_online.md
+            pm_service_api_spark_batch.md
+            pm_service_api_spark_streaming.md
+            pm_service_api_spark_building.md
+
+    {: .topicgroup}
+    SPSS 建模
+        using_pm_service.md
+        pm_service_api_spss.md
+            pm_service_api_spss_online.md
+            pm_service_api_manage.md
+            pm_service_api_develop.md
+            pm_service_api_batch
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    [IBM SPSS Modeler Knowledge Center](https://www.ibm.com/support/knowledgecenter/SS3RA7/)
+    [IBM Data Science Experience](https://datascience.ibm.com/)
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [Machine Learning API](http://watson-ml-api.mybluemix.net/)
+
+    {: .topicgroup}
+    运行时环境
+        [SDK for Node.js](../../runtimes/nodejs/index.html)
+        [Liberty for Java](../../runtimes/liberty/index.html)
+        [Go](../../runtimes/go/index.html)
+        [PHP](../../runtimes/php/index.html)
+        [Python](../../runtimes/python/index.html)
+        [Ruby](../../runtimes/ruby/index.html)
+
+    {: .topicgroup}
+    样本应用程序
+        [使用 Spark MLlib 预测客户对运动产品的兴趣](https://github.com/pmservice/product-line-prediction)
+        [使用 SPSS 预测公司的财务绩效](https://github.com/pmservice/financial-performance-prediction)
+        [使用 SPSS 选择治疗心脏疾病的最佳药物](https://github.com/pmservice/drug-selection)
+        [使用 SPSS 预测服装销售利润](https://github.com/pmservice/profits-forecast)
+        [使用 SPSS 预测客户流失率](https://github.com/pmservice/customer-satisfaction-prediction)
+
+    {: .topicgroup}
+    样本笔记本
+        [使用 Python 从 Spark ML 模型到联机评分](https://apsportal.ibm.com/analytics/notebooks/89492fd6-a641-4819-9176-3d9381561df9/view?access_token=d80bef1a172d1d83d3721b101886337158457281774186f181a2e6a5b57f5ec7)
+        [使用 Scala 从 Spark ML 模型到联机评分](https://apsportal.ibm.com/analytics/notebooks/c8652d2c-bfc9-4354-8168-f1c9f7f8dfc2/view?access_token=02a83fea8450a452c8de76af98dae078459d0f56810ddef4f4c62d5bc4fc72cf)
+        [使用 Python 从 SPSS 流到批量评分](https://apsportal.ibm.com/analytics/notebooks/9d7ce38e-9417-4c76-a6b9-5bc8cf40938a/view?access_token=5ca87e3007804e5b2bbbce77c20e99ac3c164d66f2d28dfffb54aa365caaef37)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    [IBM SPSS Analytic Server 培训预测模型的当前支持](https://www.ibm.com/support/knowledgecenter/SSWLVY_3.0.1/analytic_server_user-guide_ddita/analytic_server/ae_modeler_integration_supported_nodes.html/)
+    [IBM Watson Machine Learning](https://datasciencex.typeform.com/to/h8gqld)
+    {: .navgroup-end}
