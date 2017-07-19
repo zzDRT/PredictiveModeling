@@ -30,7 +30,7 @@ Machine Learning
             pm_service_api_spss_online.md
             pm_service_api_manage.md
             pm_service_api_develop.md
-            pm_service_api_batch
+            pm_service_api_batch.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
