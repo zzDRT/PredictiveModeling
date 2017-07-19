@@ -69,7 +69,7 @@ one at a time):
 DELETE https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job ID
 1, job ID 2,...}?accesskey=xxxxxxxxxx
 ```
-{ .codeblock}
+{: codeblock}
 
 The return will indicate how many of the jobs referenced by ID in
 the request were deleted. If this number does not match the list
@@ -84,7 +84,7 @@ You can GET the status of your job ID at any point in time:
 GET https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job
 ID}/status?accesskey=xxxxxxxxxx
 ```
-{ .codeblock}
+{: codeblock}
 
 The JSON returned indicates jobstatus and, if the job completed
 successfully, a dataUrl that you can use to obtain all generated
@@ -98,7 +98,7 @@ Call PUT for the <job ID>. It must not be in a running state:
 PUT https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job
 ID}?accesskey=xxxxxxxxxx
 ```
-{ .codeblock}
+{: codeblock}
 
 with content_type "application/json" including the new or updated
 job definition JSON in the body of the request.
@@ -117,7 +117,7 @@ queue:
 PUT https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job
 ID}?accesskey=xxxxxxxxxx
 ```
-{ .codeblock}
+{: codeblock}
 
 with content_type "application/json" including the job definition
 JSON in the body of the request.
@@ -145,7 +145,7 @@ Call PUT to make a Modeler stream file accessible for jobs:
 PUT https://{PA Bluemix load balancer URL}/pm/v1/file/{file
 ID}?accesskey=xxxxxxxxxx
 ```
-{ .codeblock}
+{: codeblock}
 
 with content_type "multipart/form-data" passing the file in the
 request.
