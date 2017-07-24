@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -42,18 +42,17 @@ the deployed model.
 
 Use Data Science Experience to create custom models. After signing up, sign in and complete the following steps.
 
-2. The first time you sign in, you'll be asked to create an
-   organization and a space. Click **Continue** and accept the
-   default values.
+1. Create an organization and a space. The first time you sign in, you'll be asked for it, 
+   so click **Continue** and accept the default values.
 
-3. After the organization is created, go to **My Projects** and click
+2. After the organization is created, go to **My Projects** and click
    **create project**.
 
-4. Specify a name and description for your project and click
+3. Specify a name and description for your project and click
    **Create**. The project name you specified will also be used as
    your Target Container's name.
 
-5. After the project is created, you can either:
+4. After the project is created, you can either:
    *  **add notebooks** and start developing your own models, or you can upload one of the
    following sample notebooks:
 

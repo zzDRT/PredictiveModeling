@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 <!-- Copyright info and last updated date at top of file: REQUIRED
@@ -59,11 +59,12 @@ For an example of a batch job adoption, please refer to the
 following notebook: [From SPSS stream to batch scoring with
 Python](https://apsportal.ibm.com/analytics/notebooks/9d7ce38e-9417-4c76-a6b9-5bc8cf40938a/view?access_token=5ca87e3007804e5b2bbbce77c20e99ac3c164d66f2d28dfffb54aa365caaef37).
 
+**Note**: The data that is shown in the dashboard is only related to real-time predictions, including the data from the upload feature.
+
 ## Deleting jobs
 
 You can delete jobs, which cancels the job if it's currently
-running. Call DELETE on the job ID (and you can cancel more than
-one at a time):
+running. Use the `DELETE` command with the `job ID`. You can cancel more than one job at a time by passing multiple IDs.
 
 ```
 DELETE https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job ID
@@ -78,7 +79,7 @@ individual jobs.
 
 ## Checking the status of a job
 
-You can GET the status of your job ID at any point in time:
+You can get the status of your `job ID` at any point by using the `GET` command:
 
 ```
 GET https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job
@@ -92,7 +93,7 @@ file content.
 
 ## Resubmit a job
 
-Call PUT for the <job ID>. It must not be in a running state:
+To resubmit a job, use the `PUT` command with the `job ID`. It must not be in a running state.
 
 ```
 PUT https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job
@@ -110,8 +111,7 @@ in this execution.
 
 ## Submit a job against an uploaded modeler stream file
 
-Call PUT for your job definition to put it in the execution
-queue:
+To put a job in the execution queue, use the `PUT` command:
 
 ```
 PUT https://{PA Bluemix load balancer URL}/pm/v1/jobs/{job
@@ -136,10 +136,10 @@ definition JSON](#job-definition-json).
 
 ## Upload a stream file to use in your jobs
 
-Note: The Machine Learning dashboard is only for real-time
+**Note**: The Machine Learning dashboard is only for real-time
 scoring. You cannot use it for running jobs (batch scoring).
 
-Call PUT to make a Modeler stream file accessible for jobs:
+To make a Modeler stream file accessible for jobs, use the `PUT` command:
 
 ```
 PUT https://{PA Bluemix load balancer URL}/pm/v1/file/{file
@@ -150,18 +150,14 @@ ID}?accesskey=xxxxxxxxxx
 with content_type "multipart/form-data" passing the file in the
 request.
 
-The unique name used (file ID in PUT call) is what you will
-reference in a DELETE call to the file API as well as the model
-reference in your job definitions. Note, the namespace of files
-used in your jobs is totally in your control – so the PUT of a
-file under the same <file ID> implicitly replaces the current
-copy held.
+The unique name used (`file ID` in a `PUT` call) is what you will
+reference in a `DELETE` call to the file API as well as the model
+reference in your job definitions. Note that the namespace of files
+used in your jobs is totally in your control. The `PUT` command of a
+file under the same `file ID` implicitly replaces the current
+copy.
 
-You may GET a list of all files uploaded for your jobs by
-omitting the <file ID>, or retrieve a specific file by GET with
-its ID. You may also DELETE an uploaded file (this will, of
-course, cause errors in any pending job execution that references
-the file).
+To generate a list of all files uploaded for your jobs, use a `GET` command, but omit the `file ID` parameter. To retrieve a specific file, use a `GET` command with the `file ID` parameter. You may also delete an uploaded file by issuing a `DELETE` command. This causes errors in any pending job execution that references the file.
 
 Request example:
 
@@ -205,7 +201,7 @@ Response when the deployment fails:
 
 ## Job types
 
-Training: This job type indicates that all "model builder"
+**Training**: This job type indicates that all "model builder"
 terminal nodes should be executed in the Modeler stream. After
 successful job completion, an updated Modeler stream with newly
 trained model nuggets will be in the job results that can be
@@ -213,25 +209,25 @@ retrieved. If the Modeler stream file has links from the model
 build nodes to the trained model nuggets in the evaluation and
 scoring branches, this will cause a refresh of those nodes.
 
-Evaluation: This job type triggers execution of all "document
+**Evaluation**: This job type triggers execution of all "document
 builder" terminal nodes (mainly from the Graphs and Output tabs
 in Modeler client) that generate static report file content that
 can be passed back to the caller. The scoring branch is not
 considered as part of this job type.
 
-Auto-Refresh: A version of the TRAINING job type where, on
+**Auto-Refresh**: A version of the `TRAINING` job type where, on
 successful completion of the job, the original Modeler stream
 file in the batch file list will be updated. Evaluation and
 explicit decision regarding a refresh event of the Modeler
 streams deployed for real-time scoring is assumed and not covered
 in auto-refresh at this time.
 
-Batch Score: Execution of the terminal node you have applied the
+**Batch Score**: Execution of the terminal node you have applied the
 Use as Scoring Branch option, indicating this is the scoring
 branch in this Modeler stream design. Job definition must specify
 Export as well as Source details.
 
-Run Stream: Execution is similar to clicking the green "run"
+**Run Stream**: Execution is similar to clicking the green "run"
 button in Modeler with the Run this script option selected on the
 Execution tab of the stream properties. Usage covers need for
 scripted execution of model training or other job types. All
@@ -240,28 +236,28 @@ parameters, with parameter values passed in the job definition.
 
 ## Job status
 
-Pending: The job definition has been submitted but has not been
+**Pending**: The job definition has been submitted but has not been
 claimed by a job server for execution yet.
 
-Running: The job definition has been claimed by a job server and
+**Running**: The job definition has been claimed by a job server and
 is executing.
 
-Canceling: The job is in the process of being canceled.
+**Canceling**: The job is in the process of being canceled.
 
-Canceled: The job has been canceled.
+**Canceled**: The job has been canceled.
 
-Failed: The job failed. Details about the cause of failure are
+**Failed**: The job failed. Details about the cause of failure are
 returned on GET on the job status.
 
-Success: The job ran successfully. Any result communicated for
+**Success**: The job ran successfully. Any result communicated for
 this event is returned in the JSON of the GET on job status.
 
 ## Job API details
 
-POST /v1/jobs/{id}
+`POST /v1/jobs/{id}`
 
 Description: Submits a job definition for execution. An error
-will result if the <job ID> already exists.
+will result if the `job ID` already exists.
 
 Content Types:
 
@@ -280,7 +276,7 @@ Access key returned as credentials in provision or bind:
 ```
 {: codeblock}
 
-User-specified Job ID. Must be unique to a Machine Learning
+User-specified `job ID`. Must be unique to a Machine Learning
 service instance:
 
 ```
@@ -320,7 +316,7 @@ Other error. JSON of exception returned
 ```
 {: codeblock}
 
-PUT /v1/jobs/{id}
+`PUT /v1/jobs/{id}`
 
 Description: Create or update a job. If a job with this ID does
 not exist, create it; otherwise, update it (which, effectively,
@@ -343,7 +339,7 @@ Access key returned as credentials in provision or bind:
 ```
 {: codeblock}
 
-User-specified Job ID:
+User-specified `job ID`:
 
 ```
 @PathParam("id")
@@ -382,7 +378,7 @@ Other error. JSON of exception returned.
 ```
 {: codeblock}
 
-GET /v1/jobs
+`GET /v1/jobs`
 
 Description: Returns a list of all defined jobs on this Machine
 Learning service instance.
@@ -419,7 +415,7 @@ Other error. JSON of exception returned:
 ```
 {: codeblock}
 
-GET /v1/jobs/{id}
+`GET /v1/jobs/{id}`
 
 Description: Request the return of a specific job definition.
 
@@ -439,7 +435,7 @@ Access key returned as credentials in provision or bind:
 ```
 {: codeblock}
 
-Submitted Job ID:
+Submitted `job ID`:
 
 ```
 @PathParam("id")
@@ -469,7 +465,7 @@ Other error. JSON of exception returned:
 ```
 {: codeblock}
 
-GET /v1/jobs/{id}/status
+`GET /v1/jobs/{id}/status`
 
 Description: Retrieve the status of a specific job.
 
@@ -489,7 +485,7 @@ Access key returned as credentials in provision or bind:
 ```
 {: codeblock}
 
-Submitted Job ID:
+Submitted `job ID`:
 
 ```
 @PathParam("id")
@@ -519,7 +515,7 @@ Other error. JSON of exception returned:
 ```
 {: codeblock}
 
-DELETE /v1/jobs/{ids}
+`DELETE /v1/jobs/{ids}`
 
 Description: Delete one or more jobs. Will cancel job if it is
 currently running.
@@ -540,7 +536,7 @@ Access key returned as credentials in provision or bind:
 ```
 {: codeblock}
 
-Submitted Job ID or Job ID list with ID values split by “,”
+Submitted `job ID` or `job ID` list with ID values split by a comma (,)
 
 ```
 @PathParam("id" or “id,id,id”)
@@ -569,28 +565,30 @@ The job definition JSON contains the following general sections:
 
 Job type and predictive model reference
 
-Action types:
+**Note**: The data that is shown in the dashboard is only related to real-time predictions, including the data from the upload feature.
 
-*  TRAINING – Executes the model builder node training or
+### Action types
+
+**TRAINING** – Executes the model builder node training or
    refreshing model nuggets. Updated Modeler stream is retrieved
    in job results.
 
-*  EVALUATION – Executes document builder and analysis nodes
+**EVALUATION** – Executes document builder and analysis nodes
    evaluating the trained model.
 
-*  AUTO_REFRESH – Performs TRAINING and updates file contents in
+**AUTO_REFRESH** – Performs TRAINING and updates file contents in
    batch file upload space.
 
-*  BATCH_SCORE – Executes the scoring branch and exports the
+**BATCH_SCORE** – Executes the scoring branch and exports the
    resulting data as directed by the job definition.
 
-*  RUN_STREAM – Executes the Modeler stream as indicated in the
+**RUN_STREAM** – Executes the Modeler stream as indicated in the
    stream properties; most often used when scripted execution is
    required.
 
 Model: ID as specified in the file upload action for the batch
 job reference. For more information, see Uploading a stream file
-to use in your jobs. Note that /pm/v1/file is used.
+to use in your jobs. Note that `/pm/v1/file` is used.
 
 ```
 "action": "TRAINING",
@@ -601,13 +599,13 @@ to use in your jobs. Note that /pm/v1/file is used.
 ```
 {: codeblock}
 
-Note that the id should be the same as the file ID used in the
-PUT API. The name is not required, but for model training and
+Note that the ID should be the same as the `file ID` used in the
+`PUT` API. The name is not required, but for model training and
 auto refresh the job result will be saved using the name defined
 here. If name isn't defined, the Machine Learning service will
 generate the result according to predefined naming rules.
 
-Job settings
+### Job settings
 
 All settings required to run this job.
 
@@ -621,7 +619,7 @@ All settings required to run this job.
 ```
 {: codeblock}
 
-Database connectivity definitions
+### Database connectivity definitions
 
 Database type: ApacheHive, DashDB, DB2, Greenplum, Impala, Informix, MySQL, Oracle, PostgreSQL, ProgressOpenEdge, Salesforce,  SQLServer, Sybase, SybaseIQ, Teradata.
 
@@ -652,7 +650,7 @@ require specific settings to be passed in ‘Options’
 ```
 {: codeblock}
 
-Source node settings
+### Source node settings
 
 Reference DB connectivity and table used to source a given branch
 in the Modeler stream as identified by the source node name.
@@ -680,7 +678,7 @@ identifies the original source node in the Modeler stream to be
 replaced by a DB source node constructed with these supplied
 parameters.
 
-Export node settings
+### Export node settings
 
 Reference DB connectivity and table used to persist data for a
 given branch in the Modeler stream as identified by the terminal
@@ -689,15 +687,15 @@ node name.
 Controlling method used when persisting data is communicated via
 the insertMode attribute:
 
-*  Append – table must exist and be compatible for insert
+**Append** – table must exist and be compatible for insert
 
-*  Create – table is created (an error is returned if it already
+**Create** – table is created (an error is returned if it already
    exists)
 
-*  Drop – if the referenced table exists, it is dropped and
+**Drop** – if the referenced table exists, it is dropped and
    re-created
 
-*  Refresh – existing rows from the table are deleted before
+**Refresh** – existing rows from the table are deleted before
    inserting new rows
 
 ```
@@ -721,10 +719,10 @@ Source node settings, node identifies the original Output node in
 the Modeler stream to be replaced by a DB export node constructed
 with these supplied parameters.
 
-Note: The Export node settings and Source node settings are
+**Note**: The Export node settings and Source node settings are
 important for making your job run successfully.
 
-Parameter value overrides
+### Parameter value overrides
 
 To override the default values for stream level parameters before
 job execution, you can specify the name/value pairs to use in the
@@ -752,14 +750,14 @@ bundled into one .zip file. Only document builder nodes capable
 of supporting the indicated reportFormat are executed and have
 their content returned after successful execution of the job.
 
-Supported formats are HTML, JPG, PNG, RTF, SAV, TAB, and XML.
+The following formats are supported: HTML, JPG, PNG, RTF, SAV, TAB, and XML.
 
 ```
 "reportFormat": "HTML"
 ```
 {: codeblock}
 
-Complete JSON example
+### Complete JSON example
 
 ```
 { 
@@ -810,15 +808,15 @@ Complete JSON example
 The following sections provide batch job SPSS Modeler file
 management API details.
 
-PUT /v1/file/{id}
+`PUT /v1/file/{id}`
 
 Description: Uploads an SPSS Modeler stream file for use in batch
 jobs.
 
-Note: If there is a file already stored under the specified ID,
+**Note**: If there is a file already stored under the specified ID,
 it will be overwritten.
 
-Content Types:
+### Content Types
 
 ```
 @Consumes({ "multipart/form-data"  })
@@ -826,7 +824,7 @@ Content Types:
 ```
 {: codeblock}
 
-Parameters:
+### Parameters
 
 Access key returned as credentials in provision or bind:
 
@@ -835,7 +833,7 @@ Access key returned as credentials in provision or bind:
 ```
 {: codeblock}
 
-User-specified file ID. Must be unique in service instance
+User-specified `file ID`. Must be unique in service instance
 repository:
 
 ```
@@ -843,7 +841,7 @@ repository:
 ```
 {: codeblock}
 
-Responses:
+### Responses
 
 Success. Returns the URL that can be used to download the file
 from the service instance's repository:
@@ -860,7 +858,7 @@ Other error. JSON of exception returned:
 ```
 {: codeblock}
 
-DELETE /v1/file/{id}
+`DELETE /v1/file/{id}`
 
 Description: Deletes the file stored under the specified ID from
 the service instance repository.
@@ -912,7 +910,7 @@ Other error. JSON of exception returned:
 ```
 {: codeblock}
 
-GET /v1/file/
+`GET /v1/file/`
 
 Description: Returns a list of the IDs of all files being managed
 in the service instance repository for batch job processing.
@@ -935,7 +933,7 @@ Access key returned as credentials in provision or bind:
 
 Responses:
 
-Success. Returns a JSON array of file ID values:
+Success. Returns a JSON array of `file ID` values:
 
 ```
 @ApiResponse(code = 200)
@@ -949,7 +947,7 @@ Other error. JSON of exception returned:
 ```
 {: codeblock}
 
-GET /v1/file/{id}
+`GET /v1/file/{id}`
 
 Description: Retrieves the SPSS Modeler stream file stored for
 use in the batch job processing under the specified ID.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 
@@ -73,12 +73,10 @@ For more details about current support for IBM SPSS Analytic
 Server-trained predictive models, see the Analytic Server section
 of IBM Knowledge Center.
 
-1. You can download Node.js sample code to try the Machine
-   Learning service. Complete the following steps to create your
-   Bluemix application and bind the Machine Learning service.
-   These examples use Node.js because it is a popular runtime.
-   Others can be used such as iOS, Ruby, Perl, or Java.
+Complete the following steps to create your Bluemix application and bind it to the Machine Learning service.
 
+1. Download Node.js sample application code from [github repository](https://github.com/pmservice/customer-satisfaction-prediction). 
+   
 2. Use the cf create-service command to create a service
    instance:
 

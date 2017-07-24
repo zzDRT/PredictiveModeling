@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 
@@ -25,6 +25,7 @@ Learning service.
   *  Spark 2.0 MLlib
   *  Python 3 with scikit-learn 0.17
 *  Classification and Regression pipeline models are currently supported.
+*  For scikit-learn models predictions without probabilities are returned at this stage.
 *  Batch and stream deployment for Python scikit-learn models is not supported at this stage.
 *  Batch and stream support for Spark models is in beta. If you're interested in participating, add yourself to the wait list! For more information, see: [https://www.ibm.biz/mlwaitlist](https://www.ibm.biz/mlwaitlist).
 
@@ -119,15 +120,11 @@ After you bind the Machine Learning service instance to your Bluemix application
    The VCAP_SERVICES environment variable includes the following
    information:
 
-   * plan - the Machine Learning plan that is used in the service provisioning.
-
-   * url - the address of the Machine Learning service instance.
-
-   * access_key - for SPSS Modeler streams only.
-
-   * instance_id - Machine Learning instance unique identifier.
-
-   * username, password - basic authorization needed to generate an access token to pass in all requests to this service instance. For example, you can generate an access token using a curl like this:
+   * ``plan`` - the Machine Learning plan that is used in the service provisioning.
+   * ``url`` - the address of the Machine Learning service instance.
+   * ``access_key`` - for SPSS Modeler streams only.
+   * ``instance_id`` - Machine Learning instance unique identifier.
+   * ``username``, ``password`` - basic authorization needed to generate an access token to pass in all requests to this service instance. For example, you can generate an access token using a curl like this:
 
 Request example:
 

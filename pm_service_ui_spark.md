@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 
@@ -23,29 +23,19 @@ that are available on an instance of the Machine Learning service
 through the Watson Machine Learning Dashboard:
 
 *  Work with samples (models, notebooks and applications)
-
 *  Display model details
-
 *  Deploy a model as:
-
    *  Online deployment (scoring)
-
    *  Batch deployment (supporting IBM Object Storage and DashDB)
-
    *  Streaming deployment (supporting IBM MessageHub)
-
 *  Get deployment details
-
 *  Delete a deployment
-
 *  Delete model
 
-
+**Note**: Working with multiple dashboard instances opened in separate tabs of the same browser is not supported.
 
 See the following sections for Dashboard examples of:
 
 *  [Online deployment](pm_service_ui_spark_online.html)
-
 *  [Batch deployment with Object Storage](pm_service_ui_spark_batch.html)
-
 *  [Streaming deployment with MessageHub](pm_service_ui_spark_streaming.html)

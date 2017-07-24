@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 
@@ -339,7 +339,7 @@ Output example:
       "prediction",
       "predictedLabel"
    ],
-   "records":[
+   "values":[
       [
          "M",
          23,
@@ -410,3 +410,12 @@ Output example:
 We can see, for example, that a 55-year-old executive is
 interested in Mountaineering Equipment, while a 23-year-old
 student is interested in Personal Accessories.
+
+**Note**: For scikit-learn models only ```values``` field is required in scoring payload.
+
+Request example:
+
+```
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: token' -d '{"values": [[0.0,1.0],[4.0,15.0]]}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}//published_models/{published_model_id}/deployments/{deployment_id}/online
+```
+{: codeblock}

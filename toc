@@ -58,7 +58,7 @@ Machine Learning
     {: .navgroup-end}
 
     {: .topicgroup}
-    Runtime environments
+    Application runtime environments
         [SDK for Node.js](../../runtimes/nodejs/index.html)
         [Liberty for Java](../../runtimes/liberty/index.html)
         [Go](../../runtimes/go/index.html)

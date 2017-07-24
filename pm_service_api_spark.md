@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-19"
+lastupdated: "2017-07-24"
 
 ---
 
@@ -30,16 +30,11 @@ Develop applications against the Data Science Experience files
 through the powerful [REST APIs](https://watson-ml-api.mybluemix.net/):
 
 *  Retrieve the metadata for a given predictive model
-
 *  Deploy models and manage deployed models
     *  Online deployment (scoring)
-
     *  Batch deployment (supporting IBM Object Storage and DashDB)
-
     *  Streaming deployment (supporting IBM MessageHub)
-
 *  Retrieve the metadata for a given deployment
-
 *  Generate predictive analytics by making score requests against
    deployed models
 
@@ -49,7 +44,5 @@ via the available [Swagger representation of the REST API](https://watson-ml-api
 See the following sections for REST API examples of:
 
 *  [Online deployment and scoring](pm_service_api_spark_online.html)
-
 *  [Batch deployment with Object Storage](pm_service_api_spark_batch.html)
-
 *  [Streaming deployment with MessageHub](pm_service_api_spark_streaming.html)
