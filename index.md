@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-24"
+lastupdated: "2017-07-30"
 
 ---
 
@@ -16,7 +16,7 @@ lastupdated: "2017-07-24"
 # Getting started with Watson Machine Learning
 {: #WMLgettingstarted}
 
-Use IBM® Watson™ Machine Learning to integrate predictive analytics with your applications. Data scientists use machine learning to develop predictive models, whereas developers to create applications that make smarter decisions, solve tough problems, and improve user outcomes.
+Use IBM® Watson™ Machine Learning to integrate predictive analytics with your applications. Data scientists use machine learning to develop predictive models, whereas developers use machine learning to create applications that make smarter decisions, solve tough problems, and improve user outcomes.
 {: shortdesc}
 
 ## Prerequisites
