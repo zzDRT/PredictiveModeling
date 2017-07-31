@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-30"
+lastupdated: "2017-07-31"
 
 ---
 
@@ -105,12 +105,15 @@ of available models on the Models tab.
 
      ```
 {
-      "tenant_id": "s745-299dcf850a6390-35c9a7ecf27a",  
-      "tenant_id_full": "ba3dde5a-ee64-4057-9749-299dcf850a63_4c55eb1c-d6fe-4f0a-9390-35c9a7ecf27a",  
-      "cluster_master_url": "https://spark.bluemix.net",  
-      "instance_id": "ba3dde5a-ee64-4057-9749-299dcf850a63",  
-      "tenant_secret": "c0cba7a4-7b19-46e6-9326-44c4f48aaf08",  
-      "plan": "ibm.SparkService.PayGoPersonal"
+     "credentials":{
+       "tenant_id": "s745-299dcf850a6390-35c9a7ecf27a",
+       "tenant_id_full": "ba3dde5a-ee64-4057-9749-299dcf850a63_4c55eb1c-d6fe-4f0a-9390-35c9a7ecf27a",
+       "cluster_master_url": "https://spark.bluemix.net",
+       "instance_id": "ba3dde5a-ee64-4057-9749-299dcf850a63",
+       "tenant_secret": "c0cba7a4-7b19-46e6-9326-44c4f48aaf08",
+       "plan": "ibm.SparkService.PayGoPersonal"
+     },
+     "version":"2.0"
 }
      ```
      {: codeblock}
