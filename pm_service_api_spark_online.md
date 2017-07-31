@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-08-01"
 
 ---
 
@@ -52,6 +52,14 @@ Output example:
 
 ```
 {"token":"**********"}
+```
+{: codeblock}
+
+Use the following terminal command to assign your token value to
+the environment variable token:
+
+```
+token="<token_value>"
 ```
 {: codeblock}
 
@@ -194,7 +202,7 @@ predictive model.
 Request example:
 
 ```
-curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: token" -d '{"name": "Product Line Prediction", "description": "Product Line Prediction Deployment", "type": "online"}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments
+curl -X POST --header "Content-Type: application/json" --header "Accept: application/json" --header "Authorization: $token" -d '{"name": "Product Line Prediction", "description": "Product Line Prediction Deployment", "type": "online"}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments
 ```
 {: codeblock}
 
@@ -317,7 +325,7 @@ M,45,Married,Retired
 Request example:
 
 ```
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: token' -d '{"fields": ["GENDER","AGE","MARITAL_STATUS","PROFESSION"],"values": [["M",23,"Single","Student"],["M",55,"Single","Executive"]]}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}//published_models/{published_model_id}/deployments/{deployment_id}/online
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: $token" -d '{"fields": ["GENDER","AGE","MARITAL_STATUS","PROFESSION"],"values": [["M",23,"Single","Student"],["M",55,"Single","Executive"]]}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}/online
 ```
 {: codeblock}
 
@@ -416,6 +424,6 @@ student is interested in Personal Accessories.
 Request example:
 
 ```
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: token' -d '{"values": [[0.0,1.0],[4.0,15.0]]}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}//published_models/{published_model_id}/deployments/{deployment_id}/online
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --header "Authorization: $token" -d '{"values": [[0.0,1.0],[4.0,15.0]]}' https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}/online
 ```
 {: codeblock}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-08-01"
 
 ---
 
@@ -58,10 +58,10 @@ Output example:
 {: codeblock}
 
 Use the following terminal command to assign your token value to
-the environment variable access_token:
+the environment variable token:
 
 ```
-access_token="<token_value>"
+token="<token_value>"
 ```
 {: codeblock}
 
@@ -541,7 +541,7 @@ Request example:
 ```
 curl -v -XPOST \
     -H "Content-Type:application/json" \
-    -H "Authorization:Bearer $access_token" \
+    -H "Authorization:Bearer $token" \
     -H "X-Spark-Service-Instance: $spark_credentials" \
     -d '{
       "name":"Customer Satisfaction Prediction",
@@ -681,7 +681,7 @@ You can check the status, and parameters related to the deployment model using *
 Request example:
 
 ```
-curl -v -XGET -H "Content-Type:application/json" -H "Authorization:Bearer $access_token" https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
+curl -v -XGET -H "Content-Type:application/json" -H "Authorization: $token" https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
 ```
 {: codeblock}
 
@@ -808,8 +808,7 @@ Request example:
 
 ```
 curl -v -XDELETE -H "Content-Type:application/json" -H
-"Authorization:Bearer $access_token" https://ibm-watson-
-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
+"Authorization: $token" https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
 ```
 {: codeblock}
 

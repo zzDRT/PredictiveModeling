@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-07-31"
+lastupdated: "2017-08-01"
 
 ---
 
@@ -50,7 +50,7 @@ Learning service instance.
 Request example:
 
 ```
-curl --basic --user username:password https://ibm-watson-ml.mybluemix.net/v2/identity/token
+curl --basic --user username:password https://ibm-watson-ml.mybluemix.net/v3/identity/token
 ```
 {: codeblock}
 
@@ -62,10 +62,10 @@ Output example:
 {: codeblock}
 
 Use the following terminal command to assign your token value to
-the environment variable access_token:
+the environment variable token:
 
 ```
-access_token="<token_value>"
+token="<token_value>"
 ```
 {: codeblock}
 
@@ -256,7 +256,7 @@ Request example:
 curl -i \
 -X POST \
 -H 'Content-Type: application/json' \
--H "Authorization: Bearer $access_token" \
+-H "Authorization: $token" \
 -H "X-Spark-Service-Instance: $spark_credentials" \
 -d '{
    "name":"Sentiment Prediction ",
@@ -416,7 +416,7 @@ Request example:
 ```
 curl -i \
 -X GET \
--H "Authorization: Bearer $token" \
+-H "Authorization: $token" \
 https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
 ```
 {: codeblock}
@@ -524,7 +524,7 @@ Request example:
 curl -i \
 -X PATCH \
 -H 'Content-Type: application/json' \
--H "Authorization: Bearer $access_token" \
+-H "Authorization: $token" \
 -d '[{"op": "replace","path": "/status","value": "STOPPED"}]' \
 https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
 ```
@@ -556,7 +556,7 @@ Request example:
 curl -i \
 -X PATCH \
 -H 'Content-Type: application/json' \
--H "Authorization: Bearer $access_token" \
+-H "Authorization: $token" \
 -d '[{"op": "replace","path": "/status","value": "RUNNING"}]' \
 https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
 ```
@@ -587,7 +587,7 @@ Request example:
 ```
 curl -i \
 -X DELETE \
--H "Authorization: Bearer $access_token" \
+-H "Authorization: $token" \
 https://ibm-watson-ml.mybluemix.net/v3/wml_instances/{instance_id}/published_models/{published_model_id}/deployments/{deployment_id}
 ```
 {: codeblock}
