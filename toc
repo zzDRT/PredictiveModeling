@@ -40,6 +40,7 @@ Machine Learning
 
     {: .navgroup id="reference"}
     [Machine Learning REST API](http://watson-ml-api.mybluemix.net/)
+    ml-deployment-documentation.md
 
     {: .topicgroup}
     Sample applications
@@ -69,4 +70,5 @@ Machine Learning
     {: .navgroup id="help"}
     [Current support for IBM SPSS Modeler nodes](https://www.ibm.com/support/knowledgecenter/SSWLVY_3.0.1/analytic_server_user-guide_ddita/analytic_server/ae_modeler_integration_supported_nodes.html/)
     [IBM Watson Machine Learning](https://datasciencex.typeform.com/to/h8gqld)
+    wml-quota-policy.md
     {: .navgroup-end}

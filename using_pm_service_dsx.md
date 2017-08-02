@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-01"
+lastupdated: "2017-08-02"
 
 ---
 
@@ -129,7 +129,7 @@ After you bind the Machine Learning service instance to your Bluemix application
 Request example:
 
 ```
-       curl --basic --user username:password https://ibm-watson-ml.mybluemix.net/v2/identity/token
+       curl --basic --user username:password https://ibm-watson-ml.mybluemix.net/v3/identity/token
 
        Output example:
 
