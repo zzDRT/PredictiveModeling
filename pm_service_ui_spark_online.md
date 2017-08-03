@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-02"
+lastupdated: "2017-08-03"
 
 ---
 
@@ -52,7 +52,7 @@ Now you'll see the online deployment in the list of available deployments on the
 
 ## Obtaining deployment details
 
-You can check the status, scoring endpoint address (```Scoring Endpoint```),
+You can check the status, scoring endpoint address (`Scoring Endpoint`),
 and parameters related to the deployed model.
 
 1. Go to the Deployments tab of the IBM® Watson™ Machine Learning
@@ -60,12 +60,12 @@ and parameters related to the deployed model.
 
 2. From ACTIONS menu select View Details.
 
-Note that ```Scoring Endpoint``` value is needed to make scoring requests in next step.
+Note that `Scoring Endpoint` value is needed to make scoring requests in next step.
 
 
 ## Making score requests
 
-Since your scoring endpoint has been created (```Scoring Endpoint```), you
+Since your scoring endpoint has been created (`Scoring Endpoint`), you
 can now generate predictions by making score requests. In this
 scenario, customer records are passed to the predictive model and
 sport product prediction is returned.

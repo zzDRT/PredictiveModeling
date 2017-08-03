@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-02"
+lastupdated: "2017-08-03"
 
 ---
 
@@ -67,8 +67,8 @@ token="<token_value>"
 
 ## Working with published models
 Use the following API call to get your instance details, such as:
-* published models ```url```
-* deployments ```url```
+* published models `url`
+* deployments `url`
 * usage information
 
 Request example:
@@ -110,7 +110,7 @@ Output example:
 {: codeblock}
 
 
-Having **published_models** ```url``` use the following API call to get model's details:
+Having **published_models** `url` use the following API call to get model's details:
 
 Request example:
 
@@ -497,7 +497,7 @@ Output example:
 {: codeblock}
 
 
-Please note **deployments** ```url``` that is needed to create batch deployment in next step.
+Please note **deployments** `url` that is needed to create batch deployment in next step.
 
 
 ## Creating a batch deployment with Object Storage
@@ -533,7 +533,7 @@ predictive model, provide the following details:
    data to score) for the model and storage for the model output
    (results.csv in this case, which is automatically created).
 
-*  To create a deployment, use the **deployments** ```url``` from previous section.
+*  To create a deployment, use the **deployments** `url` from previous section.
 
 
 Request example:
@@ -676,7 +676,7 @@ deployment.
 
 ## Obtaining deployment details
 
-You can check the status, and parameters related to the deployment model using **metadata** ```url``` (see above output example).
+You can check the status, and parameters related to the deployment model using **metadata** `url` (see above output example).
 
 Request example:
 

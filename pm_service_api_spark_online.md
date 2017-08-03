@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-02"
+lastupdated: "2017-08-03"
 
 ---
 
@@ -37,7 +37,7 @@ list of available models on the Models tab.
 
 ## Generating the access token
 
-Generate an access token using the ```user``` and ```password``` available on
+Generate an access token using the `user` and `password` available on
 the **Service Credentials** tab of the IBM Watson Machine Learning
 service instance.
 
@@ -65,8 +65,8 @@ token="<token_value>"
 
 ## Working with published models
 Use the following API call to get your instance details, such as:
-* published models ```url```
-* deployments ```url```
+* published models `url`
+* deployments `url`
 * usage information
 
 Request example:
@@ -108,7 +108,7 @@ Output example:
 {: codeblock}
 
 
-Having **published_models** ```url``` use the following API call to get model's details:
+Having **published_models** `url` use the following API call to get model's details:
 
 Request example:
 
@@ -191,7 +191,7 @@ Output example:
 {: codeblock}
 
 
-Please note **deployments** ```url``` that is needed to create online deployment in next step.
+Please note **deployments** `url` that is needed to create online deployment in next step.
 
 
 ## Creating the online deployment
@@ -249,7 +249,7 @@ Output example:
 
 ## Obtaining deployment details
 
-You can check the status, scoring endpoint address (```scoring_url```),
+You can check the status, scoring endpoint address (`scoring_url`),
 and parameters related to the deployed model.
 
 Request example:
@@ -301,7 +301,7 @@ Output example:
 
 ## Making score requests
 
-Since your scoring endpoint has been created (```scoring_url```), you
+Since your scoring endpoint has been created (`scoring_url`), you
 can now generate predictions by making score requests. In this
 scenario, customer records are passed to the predictive model and
 sport product prediction is returned.
@@ -419,7 +419,7 @@ We can see, for example, that a 55-year-old executive is
 interested in Mountaineering Equipment, while a 23-year-old
 student is interested in Personal Accessories.
 
-**Note**: For scikit-learn models only ```values``` field is required in scoring payload.
+**Note**: For scikit-learn models only `values` field is required in scoring payload.
 
 Request example:
 

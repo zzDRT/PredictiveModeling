@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-02"
+lastupdated: "2017-08-03"
 
 ---
 
@@ -44,7 +44,7 @@ of available models on the Models tab.
 
 1.  Go to the Models tab of the IBM® Watson™ Machine Learning Dashboard.
 2.  From ACTIONS menu select Create Deployment.
-3.  In Create Deployment form provide Name, Description and Batch Type.
+3.  In Create Deployment form provide Name, Description and Stream Type.
 4.  You must provide the following inputs:
 
     **Input Connection**: IBM Message Hub topics details which are used as input (tweets) for the model and storage for the model output  (prediction results).

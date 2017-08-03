@@ -2,7 +2,7 @@
 
 copyright:
   years: 2016, 2017
-lastupdated: "2017-08-02"
+lastupdated: "2017-08-03"
 
 ---
 
@@ -53,7 +53,7 @@ Note that you can also perform steps 1-3 using the Bluemix Graphical Interface i
    {: codeblock}
 
    This command creates one Machine Learning service instance
-   with the Free plan named ```my_wml_free``` in your Bluemix space.
+   with the Free plan named `my_wml_free` in your Bluemix space.
 
 2. Use the cf create-service-key command to create service
    credentials:
@@ -73,7 +73,7 @@ Note that you can also perform steps 1-3 using the Bluemix Graphical Interface i
    This command creates Machine Learning service credentials.
 
 3. Use the cf bind-service command to bind the service instance
-   ```my_wml_free``` to your application.
+   `my_wml_free` to your application.
 
    ```
    cf bind-service {AppName} my_wml_free
