@@ -40,6 +40,8 @@ Machine Learning
 
     {: .navgroup id="reference"}
     [Machine Learning REST API](http://watson-ml-api.mybluemix.net/)
+    [Scala Repository documentation](https://watson-ml-staging-libs.mybluemix.net/repository-scala/)
+    [Python Repository Module documentation](https://watson-ml-staging-libs.mybluemix.net/repository-python/)
     ml-deployment-documentation.md
 
     {: .topicgroup}
