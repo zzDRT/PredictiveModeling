@@ -59,16 +59,6 @@ Machine Learning
         [From scikit-learn to online scoring with Python](https://apsportal.ibm.com/analytics/notebooks/5215a61a-16d7-4fa2-b060-e3e243ceebe3/view?access_token=70f48c95c5571a614ce97484d3f168b1d9b6aeebce015187d3d77ce6038f025e)
         [From SPSS stream to batch scoring with Python](https://apsportal.ibm.com/analytics/notebooks/9d7ce38e-9417-4c76-a6b9-5bc8cf40938a/view?access_token=5ca87e3007804e5b2bbbce77c20e99ac3c164d66f2d28dfffb54aa365caaef37)
 
-    {: .topicgroup}
-    Application runtime environments
-        [SDK for Node.js](../../runtimes/nodejs/index.html)
-        [Liberty for Java](../../runtimes/liberty/index.html)
-        [Go](../../runtimes/go/index.html)
-        [PHP](../../runtimes/php/index.html)
-        [Python](../../runtimes/python/index.html)
-        [Ruby](../../runtimes/ruby/index.html)
-    {: .navgroup-end}
-
     {: .navgroup id="help"}
     [Current support for IBM SPSS Modeler nodes](https://www.ibm.com/support/knowledgecenter/SSWLVY_3.0.1/analytic_server_user-guide_ddita/analytic_server/ae_modeler_integration_supported_nodes.html/)
     [IBM Watson Machine Learning](https://datasciencex.typeform.com/to/h8gqld)
